@@ -1,4 +1,4 @@
-# 🎭 Dahej Dock - The Satirical Dowry Auction
+# 🎭 Calculate My Dahej - The Satirical Dowry Auction
 
 A satirical web application that exposes the absurdity of dowry culture through humor and social commentary.
 

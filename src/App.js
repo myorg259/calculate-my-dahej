@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { User, Briefcase, GraduationCap, Building, Globe, Ruler, Trophy, Calculator } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import HeroImage from './components/HeroImage';
 
 const App = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -220,9 +221,10 @@ const App = () => {
     return (
       <div className="app">
         <div className="header">
-          <h1>🎭 Dahej Dock</h1>
+          <h1>🎭 Calculate My Dahej</h1>
           <p className="subtitle">The Satirical Dowry Auction</p>
           <div className="warning-badge">⚠️ This is SATIRE!</div>
+          <HeroImage />
         </div>
 
         <div className="result-card bounce-in">
@@ -250,9 +252,10 @@ const App = () => {
   return (
     <div className="app">
       <div className="header">
-        <h1>🎭 Dahej Dock</h1>
+        <h1>🎭 Calculate My Dahej</h1>
         <p className="subtitle">The Satirical Dowry Auction</p>
         <div className="warning-badge">⚠️ This is SATIRE!</div>
+        <HeroImage />
       </div>
 
       <div className="form-container">
