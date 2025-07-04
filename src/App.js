@@ -172,12 +172,12 @@ const App = () => {
   };
 
   const formatCurrency = (amount) => {
-    if (amount >= 10000000) {
-      return `₹${(amount / 10000000).toFixed(1)} Crore`;
+    if (amount >= 1000000) {
+      return `₹${(amount / 10000000).toFixed(2)} Crore`;
     } else if (amount >= 100000) {
-      return `₹${(amount / 100000).toFixed(1)} Lakh`;
+      return `₹${(amount / 10000000).toFixed(3)} Crore`;
     } else {
-      return `₹${amount.toLocaleString()}`;
+      return `₹${(amount / 10000000).toFixed(4)} Crore`;
     }
   };
 
