@@ -1,0 +1,458 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #2c3e50;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #4a6741;
+}
+
+/* Layout */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.warning-badge {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Form Container */
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+/* Progress Bar */
+.progress-container {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4a90e2, #7b68ee);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.progress-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Step Cards */
+.step-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e8f4f8;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.step-card.active {
+  border-color: #4a90e2;
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4a90e2, #7b68ee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.step-title {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.step-content {
+  padding-left: 66px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e8f4f8;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e8f4f8;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+/* Radio and Checkbox Groups */
+.radio-group, .checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.radio-option, .checkbox-option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e8f4f8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.radio-option:hover, .checkbox-option:hover {
+  border-color: #4a90e2;
+  transform: translateY(-1px);
+}
+
+.radio-option.selected, .checkbox-option.selected {
+  border-color: #4a90e2;
+  background: #f8fbff;
+}
+
+.radio-option input, .checkbox-option input {
+  margin-right: 0.8rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4a90e2, #7b68ee);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.btn-secondary {
+  background: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #7f8c8d;
+}
+
+.btn-calculate {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  margin: 2rem auto;
+  display: block;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(231, 76, 60, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(231, 76, 60, 0.6); }
+}
+
+/* Result Card */
+.result-card {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  margin: 2rem 0;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.result-amount {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.result-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.result-message {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: #e74c3c;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.2);
+}
+
+.disclaimer strong {
+  font-size: 1.1rem;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+  
+  .step-content {
+    padding-left: 0;
+  }
+  
+  .radio-group, .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .result-amount {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .result-amount {
+    font-size: 2rem;
+  }
+  
+  .btn-calculate {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  70% { transform: scale(0.9); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
